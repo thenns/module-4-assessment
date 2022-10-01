@@ -1,14 +1,14 @@
 [
     {
         "id": 1,
-        "compliment": "Gee, you're a smart cookie!"
+        "compliment": "Gee, you're a cool person"
     },
     {
         "id": 2,
-        "compliment": "Cool shirt!"
+        "compliment": "nice hat"
     },
     {
         "id": 3,
-        "compliment": "Your javascript skills are stellar"
+        "compliment": "Your html skills are amazing"
     }
 ]
