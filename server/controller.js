@@ -20,5 +20,7 @@ module.exports = {
 
         res.status(200).send(randomFortune);
     },
+    createCompliment: (req, res) => {},
+     
 
 }
