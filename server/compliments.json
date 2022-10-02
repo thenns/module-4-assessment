@@ -1,14 +1,1 @@
-[
-    {
-        "id": 1,
-        "compliment": "Gee, you're a cool person"
-    },
-    {
-        "id": 2,
-        "compliment": "nice hat"
-    },
-    {
-        "id": 3,
-        "compliment": "Your html skills are amazing"
-    }
-]
+{ "array": ["compliment 1", "compliment 2", "compliment 3", "compliment 4"] }

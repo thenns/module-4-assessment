@@ -43,8 +43,10 @@ module.exports = {
 */
 
     getUserFortune: (req, res) => {
-        //const obj = JSON.parse(usercompliments);
-        res.status(200).send(userFortunes);
+        let randomIndex = Math.floor(Math.random() * userFortunes.array.length);
+        //let randomFortune = userFortunes.array[randomInde];
+        //res.status(200).send(userFortunes.array[0]);
+        res.status(200).send(userFortunes.array[randomIndex]);
     },
     
 
