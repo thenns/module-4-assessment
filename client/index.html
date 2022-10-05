@@ -8,18 +8,25 @@
     <button id="fortuneButton">Get a fortune</button>
     <br>
     <br>
-    <form> write your own compliment here
+    <form> write your own fortune here
     <br>
     <input type="text">
     <br>
     <br>
-    <input type=submit id="createComplimentButton">
+    <input type=submit id="createFortuneButton">
     </form>
     <br>
     <br>
     <button id="userFortuneButton">Get a random user submitted fortune</button>
+    <br>
+    <br>
+    <label for="help">choose one:</label>
 
-
+    <select name="help" id="help">
+        <option value="inspiration">inspiration</option>
+        <option value="encouragement">encouragement</option>
+        <option value="guidance">guidance</option>
+    </select>
     <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
     <script src="main.js"></script>
     
