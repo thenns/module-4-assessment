@@ -3,6 +3,7 @@ const userCompliments = require('./compliments.json');
 let globalID = 6;
 module.exports = {
 
+    //returns random compliment from array
     getCompliment: (req, res) => {
         const compliments = [`Gee, you're a smart cookie!`, `Cool shirt!`, `Your Javascript skills are stellar.`];
       
@@ -12,6 +13,7 @@ module.exports = {
       
         res.status(200).send(randomCompliment);
     },
+    //returns random fortune from array
     getFortune: (req, res) => {
         const fortunes = [`no snowflake in an avalanche ever feels responsible`,
                           `if you eat something and nobody sees you eat it, it has no calories`,
@@ -23,31 +25,37 @@ module.exports = {
 
         res.status(200).send(randomFortune);
     },
-    createCompliment: (req, res) => {
-        const { id, fortune } = req.body;
-        userCompliments.push({
+    //gets user submitted fortune into fortunes.json
+    createFortune: (req, res) => {
+        //console.log(req);
+        const { fortune } = req.body;
+        userFortunes.push({
             id: globalID,
-            compliment,
+            fortune,
         });
-        globalId++;
-        res.status(200).send(userCompliments);
+        globalID++;
+        res.status(200).send(userFortunes);
     },
-
-/*    getUserFortune: (req, res) => {
-        const fortunes = ['test1', 'test2', 'test3', 'test4'];
-        let randomIndex = Math.floor(Math.random() * fortunes.length);
-        let randomFortune = fortunes[randomIndex];
-
-        res.status(200).send(randomFortune);
-    }
-*/
-
+    //returns random fortune for fortune.json
     getUserFortune: (req, res) => {
-        let randomIndex = Math.floor(Math.random() * userFortunes.array.length);
-        //let randomFortune = userFortunes.array[randomInde];
-        //res.status(200).send(userFortunes.array[0]);
-        res.status(200).send(userFortunes.array[randomIndex]);
+        let randomIndex = Math.floor(Math.random() * userFortunes.length);
+        res.status(200).send(userFortunes[randomIndex].fortune);
     },
-    
+    //deletes the last user submitted fortune
+    deleteLastFortune: () => {
+        userFortunes.pop();
+        res.status(200).send("successfully deleted user submitted fortune");
+    },
+
+    changeLastFortune: (req, res) => {
+        const { fortune } = req.body;
+        userFortunes.pop();
+        user.Fortunes.push({
+            id: globalID,
+            fortune,
+        });
+        globalID++;
+        res.status(200).send("successfully changed last user submitted fortune");
+    },
 
 }

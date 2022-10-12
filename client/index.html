@@ -8,18 +8,28 @@
     <button id="fortuneButton">Get a fortune</button>
     <br>
     <br>
-    <form> write your own fortune here
+    <form action="http://localhost:4000/api/create_fortune" method="post"> write your own fortune here
     <br>
-    <input type="text">
+    <input type="text" id="fortune" name="fortune">
     <br>
     <br>
     <input type=submit id="createFortuneButton">
     </form>
     <br>
+    <!--    <button id="updateFortuneButton">change last fortune submitted</button> -->
+    <form action="http://localhost:4000/api/change_user_fortune" methos="post"> modify last fortune here
+    <br>
+    <input type="text" id="newFortune" name="newFortune">
+    <br>
+    <br>
+    <input type=submit id="modifyFortuneButton">
+    </form>
+    <br>
+    <button id="deleteFortuneButton">delete last fortune sumitted</button>
+    <br>
     <br>
     <button id="userFortuneButton">Get a random user submitted fortune</button>
-    <br>
-    <br>
+    <!--
     <label for="help">choose one:</label>
 
     <select name="help" id="help">
@@ -27,6 +37,7 @@
         <option value="encouragement">encouragement</option>
         <option value="guidance">guidance</option>
     </select>
+    -->
     <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
     <script src="main.js"></script>
     
